@@ -23,11 +23,6 @@ server.listen(() => {
   }
 });
 
-server.on('connectionClosed', ({ connectionId, stats }) => {
-  console.log(`Connection ${connectionId} closed`);
-  console.dir(stats);
-});
-
 server.on('requestFailed', ({ request, error }) => {
   console.log(`Request ${request.url} failed`);
   console.error(error);
