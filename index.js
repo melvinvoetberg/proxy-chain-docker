@@ -4,7 +4,7 @@ var server;
 
 if(proxyUrl) {
   server = new ProxyChain.Server({
-    port: 8000,
+    port: 80,
     prepareRequestFunction: (params) => {
       return {
         upstreamProxyUrl: proxyUrl,
@@ -12,7 +12,7 @@ if(proxyUrl) {
     }
   });
 } else {
-  server = new ProxyChain.Server({ port: 8000 });
+  server = new ProxyChain.Server({ port: 80 });
 }
 
 server.listen(() => {

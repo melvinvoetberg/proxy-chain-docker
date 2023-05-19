@@ -11,7 +11,7 @@ services:
   proxy-chain-docker:
     image: ghcr.io/melvinvoetberg/proxy-chain-docker
     ports:
-      - "8000:8000"
+      - "80:80"
 ```
 
 Or with an upstream proxy provider:
@@ -24,5 +24,5 @@ services:
     environment:
       PROXY_URL: "http://<username>:<password>@<host>:<port>"
     ports:
-      - "8000:8000"
+      - "80:80"
 ```
